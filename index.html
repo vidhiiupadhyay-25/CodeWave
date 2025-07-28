@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Editor with Tabs</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/dracula.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/eclipse.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/hint/show-hint.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>CodePen Clone with Tabs</h1>
+  </header>
+  <div class="controls">
+    <button onclick="downloadCode()">Download Code</button>
+    <button onclick="toggleTheme()">Toggle Dark/Light Mode</button>
+  </div>
+  <div class="tabs">
+    <div class="tab active" onclick="switchTab('html')">HTML</div>
+    <div class="tab" onclick="switchTab('css')">CSS</div>
+    <div class="tab" onclick="switchTab('js')">JS</div>
+  </div>
+  <div id="htmlEditor" class="editor active"></div>
+  <div id="cssEditor" class="editor"></div>
+  <div id="jsEditor" class="editor"></div>
+  <iframe id="output"></iframe>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/javascript/javascript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/hint/show-hint.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/hint/html-hint.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/hint/css-hint.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/hint/javascript-hint.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
